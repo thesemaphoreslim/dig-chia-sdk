@@ -75,6 +75,7 @@ export class FullNodePeer {
     const trustedNodeIp = Environment.TRUSTED_FULLNODE || null;
 
     if (trustedNodeIp && FullNodePeer.isValidIpAddress(trustedNodeIp)) {
+      console.log(`Found trusted node: ${trustedNodeIp}`);
       return trustedNodeIp;
     }
     return null;
